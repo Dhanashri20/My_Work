@@ -1,0 +1,11 @@
+data2 = read.csv('blood_pressure.csv')
+head(data2)
+plot(data2$Weight, data2$Systolic.BP)
+model2 = lm(Systolic.BP~Weight, data = data2)
+abline(model2)
+anova_table1 = anova(model2)
+s2 = summary(model2)
+conf_beta2 = confint(model2, level = 0.90)
+s2$r.squared
+new_data = data.frame(Weight = c(150))
+predict_CI_new = predict(model2, interval = 'confidence',level = 0.90, newdata = new_data)
