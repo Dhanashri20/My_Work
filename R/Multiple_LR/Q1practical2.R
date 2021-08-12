@@ -17,3 +17,4 @@ F_tab=qf(0.95,df1,df2)
 s2$r.squared
 s2$adj.r.squared
 conf_int = confint(m1,level = 0.90)
+#
